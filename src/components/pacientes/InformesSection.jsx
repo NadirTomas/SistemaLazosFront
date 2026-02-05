@@ -50,7 +50,7 @@ function InformesSection({
         </FormField>
         <div className="full editor-box">
           <Editor
-            apiKey="no-api-key"
+            apiKey={import.meta.env.VITE_TINYMCE_API_KEY || 'no-api-key'}
             value={reportContent}
             init={editorConfig}
             onEditorChange={(content) => setReportContent(content)}
